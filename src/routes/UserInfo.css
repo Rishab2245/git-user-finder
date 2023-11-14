@@ -1,0 +1,62 @@
+.userinfo{
+    padding: 1.25rem 1.25rem;
+}
+.back{
+    padding: 0.35rem .85rem;
+    font-size: small;
+    margin: 1rem .25rem;
+    background-color: rgb(46, 160, 67);
+    border: none;
+    border-radius: .25rem;
+}
+.datail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    
+}
+.datail img{
+ width: 20rem;
+ height: 20rem;
+ border: 1px solid rgb(46, 160, 67);
+ /* margin: 0 auto;    */
+ border-radius: 1rem;
+ box-shadow:0px 0px 20px 10px rgb(22, 35, 24);
+} 
+
+h1{
+    font-weight: 400;
+    margin: 0 0 2rem 0;
+}
+p span{
+    color: rgb(46, 160, 67);
+}
+p{
+   line-height: 0.7;
+    
+}
+a{
+   color: white;
+    
+}
+.bar{
+    display: flex;
+    border-bottom: 1px solid rgb(78, 74, 74);
+    gap: 1rem;
+    margin-top: 5%;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+@media (max-width: 768px){
+    .datail{
+        flex-direction: column;
+        
+    }
+    p{
+        line-height: 0.7;
+        font-size: large;
+         
+     }
+
+}

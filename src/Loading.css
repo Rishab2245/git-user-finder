@@ -1,0 +1,22 @@
+.loader{
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader span{
+    
+    border: 4px solid rgb(46, 160, 67);
+    border-radius: 50%;
+    border-bottom: 4px solid black;
+   height: 2rem;
+   width: 2rem;
+   animation: spin .7s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0);
+}
+
+100% { transform: rotate(360deg);}
+}

@@ -1,0 +1,23 @@
+.logo img{
+    height: 4.5rem;
+    margin-right:1rem ;
+}
+.logo h1{
+  font-weight: 350;
+}
+.logo h1::first-letter{
+  font-weight: 400;
+  font-size: 3.5rem;
+  
+}
+.logo{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+
+
+    /* line-height: 2rem; */
+    border-bottom: 1px solid rgb(78, 74, 74);
+    padding: 1rem;
+}

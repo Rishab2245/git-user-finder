@@ -1,0 +1,42 @@
+.searcharea{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 2.9rem;
+   padding: 1rem;
+}
+.searcharea input{
+    
+    height: 100%;
+    width: 40%;
+    font-weight: bold;
+    font-size: large;
+    background-color: rgb(36, 33, 33);
+    color: rgb(172, 172, 172);
+    border-radius:  1.2rem 0 0  1.2rem ;
+    padding-left: 1rem;
+    outline: none;
+    border: none;
+
+}
+.searcharea button{
+    
+    height: 100%;
+    width: 5rem;
+    font-weight: bold;
+    font-size: large;
+    background-color: rgb(46, 160, 67);
+    color: rgb(255, 255, 255);
+  border-radius: 0  1.2rem   1.2rem 0;
+    
+
+}
+@media (max-width: 668px){
+    .searcharea input{
+        width: 80%;
+    }
+
+    .searcharea{
+        height: 2.7rem;
+    }
+}
