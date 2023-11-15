@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react"
 import axios from "axios";
-import UserContainer from "../UserContainer";
+import UserContainer from "../UserContainer.jsx";
 import "./Users.css"
-import Loading from "../Loading";
+import Loading from "../Loading.jsx";
 
 export default function Users(){
     const [users,setusers] = useState([]);
