@@ -1,0 +1,21 @@
+.repocard{
+
+    background-color: #0d1117;
+    margin: 0.5rem 1rem;
+    border: 1px solid rgb(21, 68, 49);
+    padding: 1rem;
+   
+}
+.repocard a{
+
+    color: rgb(0, 190, 190);
+    font-weight: 600;
+}
+.repocard a:hover{
+
+    text-decoration: underline;
+}
+.repocard div {
+   display: flex;
+   gap: 1rem;
+}

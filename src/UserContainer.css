@@ -6,8 +6,9 @@
 }
 .userprofile h1{
     font-weight: 350;
-    font-size:1.7rem;
-    margin: .2rem;
+    font-size:1.2rem;
+    margin: 0rem;
+    color:rgb(10, 190, 166);
 }
 .userprofile {
  display: flex;
@@ -30,10 +31,9 @@ padding-top: 2rem;
 }
 .userprofile span{
     font-weight: 400;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     background-color: rgb(46, 160, 67);
     display: block;
-    width: 4rem;
     text-align: center;
     border-radius: 0.2rem;
     margin-bottom: 1rem;

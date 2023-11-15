@@ -1,5 +1,6 @@
 import "./UserContainer.css"
 import { Link } from "react-router-dom"
+import "./routes/userinfo.css"
 
 export const UsersContainer = ({users}) => {
   return (
@@ -10,7 +11,7 @@ export const UsersContainer = ({users}) => {
                 <h1>{user.login}</h1>
                 <h1 className="name">{user.name}</h1>
 
-                <Link to={`/${user.login}`}><span>view</span></Link>
+                <Link to={`/${user.login}`}><span className="back">view</span></Link>
             </div>
         ))
         

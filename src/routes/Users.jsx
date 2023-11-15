@@ -20,7 +20,6 @@ export default function Users(){
        setloading(null);
     
     }
-    
     async function finduser(){
         setloading(true);
       if(user.current.value!== ''){
@@ -35,14 +34,23 @@ export default function Users(){
       }
       setloading(null);
     }
+
+    function submit(e){
+      e.preventDefault();
+      finduser();
+    }
+
+
     useEffect(() =>{
         AllUsers();
     },[setusers])
 
     return <div>
         <div className="searcharea">
-            <input type="text" placeholder="Search github username.." ref={user}/>
+         <form onSubmit={submit}>
+         <input type="text" placeholder="Search github username.." ref={user}/>
             <button onClick={finduser}>Search</button>
+         </form>
         </div>
         { loading ? <Loading /> :  <UsersContainer users={users}/>}
     </div>
