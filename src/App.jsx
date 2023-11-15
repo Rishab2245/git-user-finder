@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css'
 import Logo from "./Logo";
-import Users from './routes/users';
+import Users from './routes/Users';
 import Userinfo from './routes/userinfo';
 function App() {
  
@@ -15,7 +15,7 @@ function App() {
        </Routes>
        </div>
     </div>
-    
+
   
   )
 }
