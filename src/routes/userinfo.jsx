@@ -30,7 +30,11 @@ export  default function Userinfo() {
         const res = await axios.get(baseurl + pathname + `/${type}`);
         const data = res.data;
         setinfos(data);
-        maximumlang();
+        console.log(data);
+        if(type=='repos'){
+          maximumlang();
+        }
+     
 
       }
       const maximumlang = async () =>{
@@ -133,7 +137,7 @@ else{
       )}
       {type === "starred" && (
         <div>
-        {infos && <star users = {infos} />}
+        {infos && <Star users = {infos} />}
         </div>
       )}
       {type === "followers" && (

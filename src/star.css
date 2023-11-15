@@ -1,0 +1,26 @@
+.stared a p{
+    color: white;
+  
+}
+.stared a h1{
+    font-size: large;
+  
+}
+.stared a {
+ line-height:0;
+}
+/* @media (max-width: 880px){
+
+    .stared{
+        grid-template-columns:  repeat( 1,1fr);
+        
+    }
+    
+}
+.stared{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+    min-width: 400px;
+    
+} */
