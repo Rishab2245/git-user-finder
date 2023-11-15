@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import "./UserInfo.css"
 import axios from 'axios';
-import Tabs from '../Tabs.jsx';
-import Repo from '../Repo.jsx';
-import Star from '../Star.jsx';
-import UserContainer from '../UserContainer.jsx';
-import Organisation from '../Organisation.jsx';
+import Tabs from '../Tabs';
+import Repo from '../Repo';
+import Star from '../Star';
+import UserContainer from '../UserContainer';
+import Organisation from '../Organisation';
 
 export  default function Userinfo() {
   const [user,setuser] = useState([]);

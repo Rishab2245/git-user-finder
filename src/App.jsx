@@ -1,8 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css'
-import Logo from "./Logo.jsx";
-import Users from './routes/Users.jsx';
-import Userinfo from './routes/Userinfo.jsx';
+import Logo from "./Logo";
+import Users from './routes/Users';
+import Userinfo from './routes/Userinfo';
 function App() {
  
   return (
@@ -16,8 +16,7 @@ function App() {
        </div>
     </div>
 
-  
-  )
+
 }
 
 export default App
