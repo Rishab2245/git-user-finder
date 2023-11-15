@@ -5,7 +5,6 @@ import axios from 'axios';
 import Tabs from '../Tabs.jsx';
 import Repo from '../Repo.jsx';
 import Star from '../Star.jsx';
-// import { UsersContainer } from '../UsersContainer';
 import UserContainer from '../UserContainer.jsx';
 import Organisation from '../Organisation.jsx';
 
