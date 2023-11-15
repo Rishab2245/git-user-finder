@@ -6,7 +6,7 @@ import Tabs from '../Tabs';
 import Repo from '../Repo';
 import Star from '../Star';
 // import { UsersContainer } from '../UsersContainer';
-import UsersContainer from '../UsersContainer';
+import UserContainer from '../UserContainer';
 import Organisation from '../Organisation';
 
 export  default function Userinfo() {
@@ -138,7 +138,7 @@ else{
       )}
       {type === "followers" && (
         <div>
-      <UsersContainer users={infos}/>
+      <UserContainer users={infos}/>
         </div>
       )}
        {type === "orgs" && (

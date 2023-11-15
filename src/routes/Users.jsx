@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import axios from "axios";
-import UsersContainer from "../UsersContainer";
+import UserContainer from "../UserContainer";
 import "./Users.css"
 import Loading from "../Loading";
 
@@ -76,6 +76,6 @@ export default function Users(){
             <button onClick={finduser}>Search</button>
          </form>
         </div>
-        { loading ? <Loading /> :  <UsersContainer users={users}/>}
+        { loading ? <Loading /> :  <UserContainer users={users}/>}
     </div>
 }
