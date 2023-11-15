@@ -11,14 +11,12 @@ const star = ({users}) => {
     {
     users.map((user,idx)=>(
         <div key={idx} className="repocard stared">
-        <div>
+        
         <a href={user.html_url} target='_blank'>
            <h1>{user.full_name}</h1> 
         </a>
-        </div>
-        <div>
-        <a href={user.owner.html_url} target='_blank'><p>owner : {user.owner.login}</p></a>     
-        </div>
+        <p>owner : {user.full_name.split('/')[0]}</p>
+        
         </div>
        
 

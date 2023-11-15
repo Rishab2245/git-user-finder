@@ -34,11 +34,34 @@ export default function Users(){
       }
       setloading(null);
     }
+    async function finduser2(){
+        setloading(true);
+        if(user.current.value!== ''){
+          setusers("");
+          const res = await axios.get(baseurl+"/"+user.current.value);
+          const data = res.data;
+          setusers(()=>[data]);
+        }
+        else{
+          AllUsers();
+        }
+      setloading(null);
+    }
 
     function submit(e){
       e.preventDefault();
       finduser();
     }
+    let timer;
+   function debouncefunc(){
+
+  clearInterval(timer);
+   timer = setTimeout(()=>{
+      finduser2()
+      console.log("1");
+  },700)
+  
+   }
 
 
     useEffect(() =>{
@@ -48,7 +71,7 @@ export default function Users(){
     return <div>
         <div className="searcharea">
          <form onSubmit={submit}>
-         <input type="text" placeholder="Search github username.." ref={user}/>
+         <input type="text" placeholder="Search github username.."  onChange={debouncefunc}   ref={user}/>
             <button onClick={finduser}>Search</button>
          </form>
         </div>

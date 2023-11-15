@@ -12,7 +12,7 @@
 }
 .userprofile {
  display: flex;
- border: 1px solid rgb(128, 126, 126);
+ border: 1px solid rgb(8, 103, 106);
  flex-direction: column;
  width: 13rem;
  justify-content: center;
