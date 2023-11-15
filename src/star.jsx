@@ -2,7 +2,7 @@ import React from 'react'
 import "./star.css"
 import "./Repo.css"
 
-const star = ({users}) => {
+const Star = ({users}) => {
 
 
 
@@ -26,4 +26,4 @@ const star = ({users}) => {
   )
 }
 
-export default star
+export default Star

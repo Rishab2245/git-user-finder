@@ -1,8 +1,8 @@
 import "./UserContainer.css"
 import { Link } from "react-router-dom"
-import "./routes/userinfo.css"
+import "./routes/Userinfo.css"
 
-export const UsersContainer = ({users}) => {
+export default function UsersContainer({users}){
   return (
     <div className="allusers">
         {users && users.map((user,idx) => user.login && (

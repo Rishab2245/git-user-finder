@@ -1,6 +1,6 @@
 import React from 'react'
 
-const organisation = ({users}) => {
+const Organisation = ({users}) => {
   return (
    <>
     {
@@ -17,4 +17,4 @@ const organisation = ({users}) => {
   )
 }
 
-export default organisation
+export default Organisation

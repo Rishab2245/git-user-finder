@@ -5,8 +5,9 @@ import axios from 'axios';
 import Tabs from '../Tabs';
 import Repo from '../Repo';
 import Star from '../Star';
-import { UsersContainer } from '../UsersContainer';
-import Organisation from '../organisation';
+// import { UsersContainer } from '../UsersContainer';
+import UsersContainer from '../UsersContainer';
+import Organisation from '../Organisation';
 
 export  default function Userinfo() {
   const [user,setuser] = useState([]);

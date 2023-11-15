@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css'
 import Logo from "./Logo";
 import Users from './routes/Users';
-import Userinfo from './routes/userinfo';
+import Userinfo from './routes/Userinfo';
 function App() {
  
   return (

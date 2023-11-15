@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import axios from "axios";
-import { UsersContainer } from "../UsersContainer";
+import UsersContainer from "../UsersContainer";
 import "./Users.css"
 import Loading from "../Loading";
 
@@ -47,6 +47,7 @@ export default function Users(){
         }
       setloading(null);
     }
+
 
     function submit(e){
       e.preventDefault();
