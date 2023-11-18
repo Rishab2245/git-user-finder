@@ -13,14 +13,11 @@ const Star = ({users}) => {
         <div key={idx} className="repocard stared">
         
         <a href={user.html_url} target='_blank'>
-           <h1>{user.full_name}</h1> 
+           <h1>{user.name}</h1> 
         </a>
-        <p>owner : {user.full_name.split('/')[0]}</p>
+       <a href="#"> <p>owner : {user.full_name}</p></a>
         
         </div>
-       
-
-
     ))
     }</>
   )

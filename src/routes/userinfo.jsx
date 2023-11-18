@@ -13,8 +13,31 @@ export  default function Userinfo() {
   const [type,settType] = useState("repos");
   const [infos, setinfos] = useState([]);
   const [maxla,setmaxla] = useState("");
+  const[page,setpage] = useState(0);
+  const[len,setlen] = useState(0);
 
 
+
+
+  function prev() {
+    if (page - 1 != -1) {
+      console.log("",page);
+      setpage((previous)=>(previous - 1));
+      
+
+      GetUrls()
+      
+    }
+  }
+   function next() {
+if (page < ((len/6))) {
+  console.log(page);
+  setpage((forword)=>(forword + 1));
+  GetUrls()
+  
+    
+  }
+   }
 
     const {pathname} = useLocation();
     const navigate = useNavigate();
@@ -29,14 +52,17 @@ export  default function Userinfo() {
       async function GetUrls(){
         const res = await axios.get(baseurl + pathname + `/${type}`);
         const data = res.data;
-        setinfos(data);
-        console.log(baseurl + pathname + `/${type}`);
-        console.log(data);
+        setlen(data.length);
+        let start = page * 6;
+        let end = start + 6;
+        let temp = data.slice(start, end);
+        if (temp!=null){
+          setinfos(temp);
+        }
+       
         if(type=='repos'){
           maximumlang();
         }
-     
-
       }
       const maximumlang = async () =>{
         let infos=await axios.get(baseurl + pathname + "/repos");
@@ -58,8 +84,6 @@ export  default function Userinfo() {
       let max = [...list].sort((a,b)=>(
         b[1]-a[1]
       ));
-      console.log(max);
-      console.log(max[0][0]);
 if(max[0][0]==null){
   setmaxla(max[1][0]);
 }
@@ -72,6 +96,7 @@ else{
 
 
     useEffect(() => {
+      setpage(0);
       GetUserInfo();
       GetUrls();
     
@@ -83,6 +108,13 @@ else{
     maximumlang();
       
     },[pathname])
+
+
+    useEffect(() => {
+
+  GetUrls();
+      
+    },[page])
 
 
 
@@ -104,7 +136,7 @@ else{
                 <p><span>public_gists</span> : {uinfo.public_gists}</p>
                 <p><span>public_repos</span> : {uinfo.public_repos}</p>
                 <p><span>Location</span> : {uinfo.location}</p>
-                <p><span>Bio</span> : {uinfo.bio}</p>
+                <p className='bio'><span>Bio</span> : {uinfo.bio}</p>
                 <p><span>Most Used Language</span> : {maxla}</p>
                 <p><span>Join</span> : {new Date(uinfo.created_at).toLocaleDateString()}</p>
                 <div>
@@ -145,7 +177,10 @@ else{
         {infos && <Organisation users = {infos} />}
         </div>
       )}
-    
+      <div className='bar '>
+      <button className='pagenation' onClick={prev}>back</button>
+      <button className='pagenation' onClick={next}>next</button>
+      </div>
       </div>
   )
 }
