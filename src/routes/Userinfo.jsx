@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
-import "./UserInfo.css"
+import "./Userinfo.css"
 import axios from 'axios';
 import Tabs from '../Tabs';
 import Repo from '../Repo';
